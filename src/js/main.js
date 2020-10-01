@@ -1,0 +1,3 @@
+(() => {
+    const lazyimages = new LazyLoader();
+})();

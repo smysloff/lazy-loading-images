@@ -1,0 +1,24 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Lazy Loading Images
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no')
+  meta(name='description' content='Lazy Loading Images')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='stylesheet' href='css/lazyloading.css')
+body
+    header.header
+    h1 Lazy Loading Images
+    main.main
+    .gallery
+        .gallery__list
+        -let pixel = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAGCAQAAAC/O6xzAAAAD0lEQVR42mNkwAoY6S8MAAJtAAceQNJPAAAAAElFTkSuQmCC';
+        -let images = ['https://wallpaperset.com/w/full/8/f/e/36465.jpg', 'http://getwallpapers.com/wallpaper/full/8/a/c/582623.jpg', https:'//wallpapertag.com/wallpaper/full/9/9/5/127023-free-download-1920x1080-space-wallpaper-1920x1080.jpg', 'https://www.pixelstalk.net/wp-content/uploads/2016/04/Space-wallpaper-HD-free-desktop.jpg', 'https://www.pixelstalk.net/wp-content/uploads/2016/04/Backgrounds-download-space-wallpapers-HD.jpg', 'https://www.pixelstalk.net/wp-content/uploads/2016/04/Dark-Blue-Space-Wallpaper-HD.jpg', 'https://www.pixelstalk.net/wp-content/uploads/2016/04/Images-Photos-Download-Space-Wallpapers-HD.jpg', 'https://www.pixelstalk.net/wp-content/uploads/images3/Awesome_Space_HD_Wallpaper.jpg', 'https://www.pixelstalk.net/wp-content/uploads/images3/Abstract_Space_Wallpaper_HD_Desktop.jpg', 'https://www.pixelstalk.net/wp-content/uploads/images3/Abstract_Sunrise_Space_Wallpaper_1920x1080.jpg', 'https://www.pixelstalk.net/wp-content/uploads/2016/04/Mountains-Outer-Space-Wallpapers-HD.jpg', 'https://www.pixelstalk.net/wp-content/uploads/2016/04/Planet-clouds-light-star-pictures-wallpapers-HD.jpg'];
+        each image,i in images 
+            .gallery__item.lazyloading
+            img.gallery__img(src=pixel data-src=image alt='cosmos wallpaper ' + (i+1))
+    footer.footer
+    .footer__copy 2020 &copy; Lazy Loading Image
+    
+    script(src="js/lazyloading.js")
+    script(src="js/main.js")
